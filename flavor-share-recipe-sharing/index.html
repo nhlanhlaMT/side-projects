@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorShare | Recipe Community</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Flavor<span>Share</span></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="btn">Share Recipe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Discover & Share Amazing Recipes</h1>
+                <p>Join our community of food lovers and explore thousands of delicious recipes from around the world.</p>
+                <a href="#" class="btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search for recipes...">
+                <button class="btn search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Popular Categories</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Breakfast" class="category-img">
+                    <div class="category-info">
+                        <h3>Breakfast</h3>
+                        <p>120 Recipes</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Salads" class="category-img">
+                    <div class="category-info">
+                        <h3>Salads</h3>
+                        <p>85 Recipes</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Main Dishes" class="category-img">
+                    <div class="category-info">
+                        <h3>Main Dishes</h3>
+                        <p>210 Recipes</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80" alt="Desserts" class="category-img">
+                    <div class="category-info">
+                        <h3>Desserts</h3>
+                        <p>150 Recipes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Recipes -->
+    <section class="featured-recipes">
+        <div class="container">
+            <h2 class="section-title">Featured Recipes</h2>
+            <div class="recipe-grid">
+                <!-- Recipe 1 -->
+                <div class="recipe-card" onclick="openModal('recipe1')">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Avocado Toast" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Avocado Toast with Poached Eggs</h3>
+                        <div class="recipe-meta">
+                            <span><i class="fas fa-clock"></i> 15 mins</span>
+                            <span><i class="fas fa-utensils"></i> Breakfast</span>
+                        </div>
+                        <p class="recipe-description">A healthy and delicious breakfast option packed with nutrients and flavor.</p>
+                        <div class="recipe-author">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Author" class="author-avatar">
+                            <span class="author-name">Sarah Johnson</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 2 -->
+                <div class="recipe-card" onclick="openModal('recipe2')">
+                    <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="Pasta" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Creamy Garlic Parmesan Pasta</h3>
+                        <div class="recipe-meta">
+                            <span><i class="fas fa-clock"></i> 25 mins</span>
+                            <span><i class="fas fa-utensils"></i> Main Dish</span>
+                        </div>
+                        <p class="recipe-description">Rich and creamy pasta with garlic and parmesan that's ready in under 30 minutes.</p>
+                        <div class="recipe-author">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Author" class="author-avatar">
+                            <span class="author-name">Michael Chen</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 3 -->
+                <div class="recipe-card" onclick="openModal('recipe3')">
+                    <img src="https://images.unsplash.com/photo-1565299624943-bdead15d1f6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=768&q=80" alt="Burger" class="recipe-img">
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Classic Beef Burger</h3>
+                        <div class="recipe-meta">
+                            <span><i class="fas fa-clock"></i> 30 mins</span>
+                            <span><i class="fas fa-utensils"></i> Main Dish</span>
+                        </div>
+                        <p class="recipe-description">Juicy beef patty with all the classic toppings on a toasted brioche bun.</p>
+                        <div class="recipe-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Author" class="author-avatar">
+                            <span class="author-name">Emma Rodriguez</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn btn-secondary">View All Recipes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get weekly recipe inspiration, cooking tips, and exclusive content delivered straight to your inbox.</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>FlavorShare</h3>
+                    <p>Connecting food lovers around the world through the joy of cooking and sharing recipes.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Breakfast</a></li>
+                        <li><a href="#">Lunch</a></li>
+                        <li><a href="#">Dinner</a></li>
+                        <li><a href="#">Desserts</a></li>
+                        <li><a href="#">Vegetarian</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> hello@flavorshare.com</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, Culinary City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 FlavorShare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Recipe Modal -->
+    <div class="modal" id="recipeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalRecipeTitle">Avocado Toast with Poached Eggs</h3>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Recipe" class="modal-img">
+                
+                <div class="recipe-details">
+                    <div class="recipe-info">
+                        <p><strong>Prep Time:</strong> 5 minutes</p>
+                        <p><strong>Cook Time:</strong> 10 minutes</p>
+                        <p><strong>Total Time:</strong> 15 minutes</p>
+                        <p><strong>Servings:</strong> 2</p>
+                        <p><strong>Difficulty:</strong> Easy</p>
+                    </div>
+                    <div class="recipe-info">
+                        <p><strong>Author:</strong> Sarah Johnson</p>
+                        <p><strong>Category:</strong> Breakfast</p>
+                        <p><strong>Cuisine:</strong> American</p>
+                        <p><strong>Rating:</strong> ★★★★★ (24 reviews)</p>
+                    </div>
+                </div>
+
+                <div class="ingredients">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>2 slices of whole grain bread</li>
+                        <li>1 ripe avocado</li>
+                        <li>2 eggs</li>
+                        <li>1 tablespoon white vinegar</li>
+                        <li>Salt and pepper to taste</li>
+                        <li>Red pepper flakes (optional)</li>
+                        <li>Fresh cilantro or parsley for garnish</li>
+                    </ul>
+                </div>
+
+                <div class="instructions">
+                    <h3>Instructions</h3>
+                    <ol>
+                        <li>Toast the bread slices until golden and crisp.</li>
+                        <li>Cut the avocado in half, remove the pit, and scoop the flesh into a bowl. Mash with a fork and season with salt and pepper.</li>
+                        <li>Fill a medium saucepan with about 3 inches of water. Add vinegar and bring to a gentle simmer.</li>
+                        <li>Crack each egg into a small bowl or cup. Create a gentle whirlpool in the simmering water and carefully slide the eggs in, one at a time.</li>
+                        <li>Cook for 3-4 minutes until the whites are set but yolks are still runny. Remove with a slotted spoon and drain on paper towels.</li>
+                        <li>Spread the mashed avocado on the toast, top with poached eggs, and season with salt, pepper, and red pepper flakes if desired.</li>
+                        <li>Garnish with fresh herbs and serve immediately.</li>
+                    </ol>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn" onclick="alert('Recipe saved to your favorites!')">
+                        <i class="far fa-heart"></i> Save Recipe
+                    </button>
+                    <button class="btn btn-secondary" onclick="window.print()">
+                        <i class="fas fa-print"></i> Print Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
